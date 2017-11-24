@@ -20,6 +20,7 @@ Quick Start
 Simple Example
 
 1. Spring+XML Mode
+
 1.1)  Publish provider
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -48,19 +49,33 @@ Simple Example
 </beans>
 
 2. Api Mode
+
 2.1) Publish provider
+
     public static void main(String[] args) throws UnsupportedEncodingException {
+    
         HelloService helloService = new HelloServiceImpl();
+        
         ServerConfig serverConfig = new ServerConfig();
+        
         serverConfig.setProtocol("jsf");
+        
         logger.info("ServerConfig");
+        
         ProviderConfig<HelloService> providerConfig = new ProviderConfig<HelloService>();
+        
         providerConfig.setInterfaceId("com.ipd.testjsf.HelloService");
+        
         providerConfig.setRef(helloService);
+        
         providerConfig.setAlias("JSF:0.0.1");
+        
         providerConfig.setServer(serverConfig);
+        
         logger.info("ProviderConfig");
+        
         providerConfig.export();
+        
         logger.info("Publishing is finished");
 
         synchronized (ServerMainAPI.class) {
@@ -74,14 +89,23 @@ Simple Example
     }
 
 2.2) Start consumer
+
     public static void main(String[] args){
+    
         ConsumerConfig<HelloService> consumerConfig = new ConsumerConfig<HelloService>();
+        
         consumerConfig.setInterfaceId("com.ipd.testjsf.HelloService");
+        
         consumerConfig.setProtocol("jsf");
+        
         consumerConfig.setAlias("JSF:0.0.1");
+        
         consumerConfig.setUrl("jsf://127.0.0.1:22000;jsf://127.0.0.1:22001");
+        
         logger.info("ConsumerConfig");
+        
         HelloService service = consumerConfig.refer();
+        
         while (true) {
             try {
                 String result = service.echoStr("string put");
