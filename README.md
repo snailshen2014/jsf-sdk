@@ -47,7 +47,7 @@ Simple Example
     </jsf:consumer>
 </beans>
 
-2.API Mode
+2. Api Mode
 2.1) Publish provider
     public static void main(String[] args) throws UnsupportedEncodingException {
         HelloService helloService = new HelloServiceImpl();
@@ -58,7 +58,7 @@ Simple Example
         providerConfig.setInterfaceId("com.ipd.testjsf.HelloService");
         providerConfig.setRef(helloService);
         providerConfig.setAlias("JSF:0.0.1");
-        providerConfig.setServer(serverConfig); // ¶๶serverԃlist
+        providerConfig.setServer(serverConfig);
         logger.info("ProviderConfig");
         providerConfig.export();
         logger.info("Publishing is finished");
