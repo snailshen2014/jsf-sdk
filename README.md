@@ -72,6 +72,7 @@ Simple Example
             }
         }
     }
+
 2.2) Start consumer
     public static void main(String[] args){
         ConsumerConfig<HelloService> consumerConfig = new ConsumerConfig<HelloService>();
