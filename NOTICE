@@ -1,0 +1,156 @@
+Copyright 2004-2016 .
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+================================================================
+Dependencies:
+
+Spring:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://www.springsource.org
+
+Javassist:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://www.jboss.org/javassist
+
+Netty:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://netty.io
+
+RESTEasy:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://resteasy.jboss.org
+
+CXF:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://cxf.apache.org
+
+Jetty:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://jetty.mortbay.org
+
+ProtoBuf:
+
+  * LICENSE:
+    * http://www.opensource.org/licenses/bsd-license.php (BSD 2-Clause License)
+  * HOMEPAGE:
+    * https://developers.google.com/protocol-buffers/
+
+SLF4J:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://www.slf4j.org
+
+Log4j:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://log4j.apache.org
+
+Hessian:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://hessian.caucho.com
+
+FastJson:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://code.alibabatech.com/wiki/fastjson
+
+MessagePack:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://msgpack.org
+
+Hession:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://hessian.caucho.com
+
+Dubbo:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://dubbo.io
+
+Cglib:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * https://github.com/cglib/cglib/wiki
+
+AspectJ:
+
+  * LICENSE:
+    * http://www.eclipse.org/org/documents/epl-v10.php (Eclipse Public License 1.0)
+  * HOMEPAGE:
+    * http://www.eclipse.org/aspectj
+
+BeanValidation:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://beanvalidation.org
+
+HibernateValidator:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://www.hibernate.org/subprojects/validator.html
+
+Harmony:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://harmony.apache.org/
+
+Snappy:
+
+  * LICENSE:
+    * http://www.apache.org/licenses/LICENSE-2.0 (Apache License 2.0)
+  * HOMEPAGE:
+    * http://google.github.io/snappy/
