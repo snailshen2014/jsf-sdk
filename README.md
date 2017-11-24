@@ -1,7 +1,7 @@
 
-JSF is a fully developed high-performance RPC framework.
+<B>JSF is a fully developed high-performance RPC framework.</B>
 
-JSF Feature:
+<B>JSF Feature:</B>
 1)  TCP and HTTP protocol
 2)  REST protocol service
 3)  Serialization formats such as MsgPack,JSON,Hessian
@@ -11,13 +11,13 @@ JSF Feature:
 7)  Extended filter framework
 8)  Active connection health checking
 
-Quick Start
+<B>Quick Start</B>
 
 1. Establish project and introduce JSF
 2. Implement and publish provider service
 3. Implement consumer
 
-Simple Example
+<B>Simple Example</B>
 
 1. Spring+XML Mode
 
