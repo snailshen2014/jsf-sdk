@@ -11,6 +11,9 @@
 7)  Extended filter framework
 8)  Active connection health checking
 
+<B>Documentation:</B>
+1)  <a href="https://github.com/tigcode/jsf-sdk/wiki">Documentation Home</a>
+
 <B>Quick Start</B>
 
 1. Establish project and introduce JSF
