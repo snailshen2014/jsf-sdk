@@ -99,11 +99,6 @@ public class ConsumerConfig<T> extends AbstractConsumerConfig<T> implements Seri
             throw new InitErrorException("[JSF-21300]Value of \"alias\" value is not specified in consumer" +
                     " config with key " + key + " !");
         }
-        // 暂时只支持直连调用
-        if (StringUtils.isBlank(url)){
-            throw new InitErrorException("[JSF-21308]Value of consumer.url is null in consumer" +
-                    " config with key " + key + " !");
-        }
         // 提前检查接口类
         getProxyClass();
 

@@ -4,6 +4,67 @@
     <xsd:annotation>
         <xsd:documentation><![CDATA[ Namespace support for the RPC Framework ]]></xsd:documentation>
     </xsd:annotation>
+    <!-- com.ipd.jsf.gd.config.RegistryConfig -->
+    <xsd:element name="registry">
+        <xsd:annotation>
+            <xsd:documentation><![CDATA[ 注册中心配置，可作为一级元素 ]]></xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="parameter" minOccurs="0" maxOccurs="unbounded"/>
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:ID" use="required">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[ Spring的BeanId ]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="address" type="xsd:string" use="optional">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[ 注册中心地址，多个用逗号分隔 ]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="index" type="xsd:string" use="optional">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[ 注册中心Index服务地址 ]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="protocol" type="xsd:string" use="optional">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[ 注册中心协议 ]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="timeout" type="xsd:string" use="optional">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[ 调用注册中心的超时时间 ]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="connectTimeout" type="xsd:string" use="optional">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[ 连接注册中心的超时时间 ]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="file" type="xsd:string" use="optional">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[ 备份文件保存地址 ]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="register" type="xsd:string" use="optional" default="true">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[ 是否注册服务 ]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="subscribe" type="xsd:string" use="optional" default="true">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[ 是否订阅服务 ]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+            <xsd:attribute name="batchCheck" type="xsd:string" use="optional">
+                <xsd:annotation>
+                    <xsd:documentation><![CDATA[ 定时批量检查时的条目数 ]]></xsd:documentation>
+                </xsd:annotation>
+            </xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
     <!-- ServerBean -->
     <xsd:element name="server">
         <xsd:annotation>
@@ -182,6 +243,11 @@
         <xsd:attribute name="filter" type="xsd:string" use="optional">
             <xsd:annotation>
                 <xsd:documentation><![CDATA[ 过滤器实现链，多个用英文逗号隔开 ]]></xsd:documentation>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="registry" type="xsd:string" use="optional">
+            <xsd:annotation>
+                <xsd:documentation><![CDATA[ 注册中心引用 ]]></xsd:documentation>
             </xsd:annotation>
         </xsd:attribute>
         <xsd:attribute name="register" type="xsd:string" use="optional">
