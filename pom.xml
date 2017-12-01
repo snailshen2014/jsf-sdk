@@ -24,7 +24,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.ipd</groupId>
     <artifactId>jsf</artifactId>
-    <version>1.6.0</version>
+    <version>1.6.1</version>
     <name>jsf-client</name>
     <description>RPC Framework</description>
     <properties>

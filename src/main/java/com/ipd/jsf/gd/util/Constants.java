@@ -38,12 +38,12 @@ public class Constants {
      * 1.2.3-SNAPSHOT对应1230<br>
      * 1.2.3正式版对应1231
      */
-    public static final int JSF_VERSION = 1601;
+    public static final int JSF_VERSION = 1611;
 
     /**
      * 当前Build版本，每次发布修改  //FIXME
      */
-    public static final String JSF_BUILD_VERSION = "1.6.0_201711211400";
+    public static final String JSF_BUILD_VERSION = "1.6.1_201712010951";
 
     /**
      * JSF协议头的魔术位
