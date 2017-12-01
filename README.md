@@ -1,5 +1,5 @@
 
-<B>JSF is a fully developed high-performance RPC framework.</B>
+<B>JSF is production-quality, high-performance Java RPC framework.</B>
 
 <B>JSF Feature:</B>
 1)  TCP and HTTP protocol
@@ -13,6 +13,7 @@
 
 <B>Documentation:</B>
 1)  <a href="https://github.com/tigcode/jsf-sdk/wiki">Documentation Home</a>
+2)  <a href="https://github.com/tigcode/jsf-core">Documentation JSF-CORE</a>
 
 <B>Quick Start</B>
 
