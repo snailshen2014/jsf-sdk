@@ -13,6 +13,7 @@
 
 <B>Documentation:</B>
 1)  <a href="https://github.com/tigcode/jsf-sdk/wiki">Documentation Home</a>
+2)  <a href="https://github.com/tigcode/jsf-core">Documentation JSF-CORE</a>
 
 <B>Quick Start</B>
 
