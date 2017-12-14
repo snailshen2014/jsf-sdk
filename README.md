@@ -1,46 +1,53 @@
+JSF- An RPC library and framework
+===================================
 
-<B>JSF is production-quality, high-performance Java RPC framework.</B>
+# What is JSF
+  
+JSF is an RPC framework developed by the **TIG**(Technical Infrastructure Group).
+   
+It is now supporting thouthands of applications, providing over 200 billions of RPC calls everyday. During the China's big shopping festivals like Double 11 and 618, the total number of JSF-based RPC calls can reach 400 billions.
 
-<B>JSF Feature:</B>
-1)  TCP and HTTP protocol
-2)  REST protocol service
-3)  Serialization formats such as MsgPack,JSON,Hessian
-4)  Data Compression
-5)  Multiple LB strategies and cluster strategies
-6)  Synchronous and asynchronous invocation
-7)  Extended filter framework
-8)  Active connection health checking
+## JSF Features
+* TCP and HTTP protocols
+* REST style service
+* Multiple serialization data formats such as MsgPack,JSON,Hessian
+* Data Compression
+* Multiple load balancing strategies and cluster strategies
+* Synchronous and asynchronous invocation
+* Extendable filtering framework
+* Active connection health checking
 
-<B>Documentation:</B>
-1)  <a href="https://github.com/tigcode/jsf-sdk/wiki">Documentation Home</a>
-2)  <a href="https://github.com/tigcode/jsf-core">Documentation JSF-CORE</a>
+# Documentation
 
-<B>Quick Start</B>
+* [Documentation Home](https://github.com/tigcode/jsf-sdk/wiki)
+* [Documentation JSF-CORE](https://github.com/tigcode/jsf-core)
 
-1. Establish project and introduce JSF
-2. Implement and publish provider service
-3. Implement consumer
+# Quick Start
 
-<B>Simple Example</B>
+* Establish project and introduce JSF
+* Implement and publish provider service
+* Implement consumer
 
-1. Spring+XML Mode
+# Simple Example
+There are two approaches shown as follows to define providers and consumers.
+## Spring + XML
+```
+    <?xml version="1.0" encoding="UTF-8"?>
+    <beans xmlns="http://www.springframework.org/schema/beans"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jsf="http://jsf.ipd.com/schema/jsf"
+           xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://jsf.ipd.com/schema/jsf http://jsf.ipd.com/schema/jsf/jsf.xsd">
+    
+        <bean id="helloService" class="com.ipd.testjsf.HelloServiceImpl"/>
+        <jsf:server id="jsf" protocol="jsf" port="9090"/>
+        <jsf:provider id="helloServiceExport" interface="com.ipd.testjsf.HelloService"
+                      ref="helloService" server="jsf" alias="JSF:0.0.1" register="false">
+        </jsf:provider>
+    </beans>
+```
 
-1.1)  Publish provider
-<?xml version="1.0" encoding="UTF-8"?>
-<beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jsf="http://jsf.ipd.com/schema/jsf"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-       http://jsf.ipd.com/schema/jsf http://jsf.ipd.com/schema/jsf/jsf.xsd">
-
-    <bean id="helloService" class="com.ipd.testjsf.HelloServiceImpl"/>
-    <jsf:server id="jsf" protocol="jsf" port="9090"/>
-    <jsf:provider id="helloServiceExport" interface="com.ipd.testjsf.HelloService"
-                  ref="helloService" server="jsf" alias="JSF:0.0.1" register="false">
-    </jsf:provider>
-</beans>
-
-1.2) Start consumer
-<?xml version="1.0" encoding="UTF-8"?>
+```
+    <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:jsf="http://jsf.ipd.com/schema/jsf"
@@ -51,37 +58,24 @@
                   protocol="jsf" alias="JSF:0.0.1" timeout="60000" url="jsf://127.0.0.1:9090">
     </jsf:consumer>
 </beans>
+```
 
-2. Api Mode
+## API
 
-2.1) Publish provider
-
+```
     public static void main(String[] args) throws UnsupportedEncodingException {
-    
         HelloService helloService = new HelloServiceImpl();
-        
         ServerConfig serverConfig = new ServerConfig();
-        
         serverConfig.setProtocol("jsf");
-        
         logger.info("ServerConfig");
-        
         ProviderConfig<HelloService> providerConfig = new ProviderConfig<HelloService>();
-        
         providerConfig.setInterfaceId("com.ipd.testjsf.HelloService");
-        
         providerConfig.setRef(helloService);
-        
         providerConfig.setAlias("JSF:0.0.1");
-        
         providerConfig.setServer(serverConfig);
-        
         logger.info("ProviderConfig");
-        
         providerConfig.export();
-        
         logger.info("Publishing is finished");
-
         synchronized (ServerMainAPI.class) {
             while (true) {
                 try {
@@ -91,25 +85,17 @@
             }
         }
     }
+```
 
-2.2) Start consumer
-
+```
     public static void main(String[] args){
-    
         ConsumerConfig<HelloService> consumerConfig = new ConsumerConfig<HelloService>();
-        
         consumerConfig.setInterfaceId("com.ipd.testjsf.HelloService");
-        
         consumerConfig.setProtocol("jsf");
-        
         consumerConfig.setAlias("JSF:0.0.1");
-        
         consumerConfig.setUrl("jsf://127.0.0.1:22000;jsf://127.0.0.1:22001");
-        
         logger.info("ConsumerConfig");
-        
         HelloService service = consumerConfig.refer();
-        
         while (true) {
             try {
                 String result = service.echoStr("string put");
@@ -123,3 +109,4 @@
             }
         }
     }
+```
