@@ -35,7 +35,8 @@ There are two approaches shown as follows to define providers and consumers.
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jsf="http://jsf.ipd.com/schema/jsf"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd
        http://jsf.ipd.com/schema/jsf http://jsf.ipd.com/schema/jsf/jsf.xsd">
     
     <bean id="helloService" class="com.ipd.testjsf.HelloServiceImpl"/>
@@ -51,7 +52,8 @@ There are two approaches shown as follows to define providers and consumers.
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:jsf="http://jsf.ipd.com/schema/jsf"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+       http://www.springframework.org/schema/beans/spring-beans.xsd
        http://jsf.ipd.com/schema/jsf  http://jsf.ipd.com/schema/jsf/jsf.xsd">
 
     <jsf:consumer id="helloService" interface="com.ipd.testjsf.HelloService" retries="0"
